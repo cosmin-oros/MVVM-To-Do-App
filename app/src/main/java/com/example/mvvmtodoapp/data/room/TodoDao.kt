@@ -19,4 +19,7 @@ interface TodoDao {
     @Query("DELETE FROM todo")
     suspend fun deleteAllTodo()
 
+    @Query("UPDATE todo SET isComplete =:isComplete WHERE id = :id")
+    suspend fun updateTodo(isComplete: Boolean, id: Long)
+
 }
