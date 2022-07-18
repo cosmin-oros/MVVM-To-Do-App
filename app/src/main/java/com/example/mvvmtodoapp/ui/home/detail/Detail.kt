@@ -29,7 +29,7 @@ fun DetailScreen(
         onTimeTextChange = { viewModel.onTimeChange(it) },
         onNavigate = { onNavigate() },
         onSaveTodo = { viewModel.insert(it) },
-        selectedId = state.selectedId)
+        selectedId = state.selectId)
 }
 
 @Composable

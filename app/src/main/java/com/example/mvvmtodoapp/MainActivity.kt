@@ -17,7 +17,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MVVMToDoAPPTheme {
-
+                Surface(modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colors.background) {
+                    TodoNavHost()
+                }
             }
         }
     }
